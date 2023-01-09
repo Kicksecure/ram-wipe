@@ -14,7 +14,7 @@ Rules-Requires-Root: no
 
 Package: ram-wipe
 Architecture: all
-Depends: dracut, kexec-tools, ${misc:Depends}
+Depends: helper-scripts, dracut, kexec-tools, ${misc:Depends}
 Description: dracut module to wipe RAM on shutdown and reboot
  Discussion:
  .
