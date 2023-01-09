@@ -1,0 +1,47 @@
+commit 60509c0861548cfe02dfb7c1f92f915a2517493e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:57:54 2023 -0500
+
+    debinstfile
+
+commit 5acf24a397f5229443790d6933ea9180eb381ccf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:50:58 2023 -0500
+
+    readme
+
+commit 10cde49d46e28fcb80dc392de35d6300b4d14d87
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:43:30 2023 -0500
+
+    Depends: helper-scripts
+    
+    because contains kernel-file-detect and initrd-file-detect
+
+commit 807104d788d1614ef95f05afa5e880e6d560d983
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:42:18 2023 -0500
+
+    kexec is required for cold boot attack defense.
+    
+    kernel.kexec_load_disabled=0
+
+commit 918eff372715e18fd7e8db5035b12450070b54a5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:26:00 2023 -0500
+
+    comments
+
+commit 1532e66f6a952c323a676d00e9775ab1ca35cbc0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:23:46 2023 -0500
+
+    import /etc/default/grub.d/40_ram-wipe.cfg
+    
+    from security-misc
+
+commit ad33c1306fe73af102b98f8c6ea30ec49951b046
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 06:17:37 2023 -0500
+
+    initial commit
