@@ -15,8 +15,7 @@ Rules-Requires-Root: no
 Package: ram-wipe
 Architecture: all
 Depends: helper-scripts, dracut, kexec-tools, ${misc:Depends}
-Description: dracut module to wipe RAM on shutdown and reboot
- Discussion:
+Description: Wipe RAM on shutdown and reboot
+ A dracut module that wipes RAM on shutdown and reboot.
  .
- Happening primarily in Whonix forums.
- https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
+ Not implemented for initramfs.
