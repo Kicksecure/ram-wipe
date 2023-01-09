@@ -1,0 +1,7 @@
+## Copyright (C) 2023 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+## This file was generated using 'genmkfile debinstfile'.
+
+etc/*
+var/*

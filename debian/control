@@ -1,0 +1,22 @@
+## Copyright (C) 2022 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+Source: ram-wipe
+Section: misc
+Priority: optional
+Maintainer: Patrick Schleizer <adrelanos@whonix.org>
+Build-Depends: debhelper (>= 13), debhelper-compat (= 13)
+Homepage: https://github.com/Kicksecure/ram-wipe
+Vcs-Browser: https://github.com/Kicksecure/ram-wipe
+Vcs-Git: https://github.com/Kicksecure/ram-wipe.git
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+
+Package: ram-wipe
+Architecture: all
+Depends: dracut, kexec-tools, ${misc:Depends}
+Description: dracut module to wipe RAM on shutdown and reboot
+ Discussion:
+ .
+ Happening primarily in Whonix forums.
+ https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
