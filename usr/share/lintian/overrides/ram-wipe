@@ -1,0 +1,6 @@
+## Copyright (C) 2019 - 2022 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+## This is how dracut is still implemented.
+security-misc: executable-in-usr-lib usr/lib/dracut/modules.d/10ram-wipe-exit/*
+security-misc: executable-in-usr-lib usr/lib/dracut/modules.d/40cold-boot-attack-defense/*
