@@ -1,3 +1,43 @@
+commit bc4bbcef66bf9acf42c4975269962b164bc91e5f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jan 24 07:05:09 2023 -0500
+
+    add debian install file (generated using "genmkfile debinstfile")
+
+commit 81b71915848328955f97a2334b816d0bfab6e33b
+Merge: 133f7b2 c5c5314
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jan 24 06:26:42 2023 -0500
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit c5c5314c0beab8f181a448ee75f14edb0c9ed239
+Merge: 133f7b2 69af367
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jan 24 06:25:32 2023 -0500
+
+    Merge pull request #1 from friedy10/master
+    
+    Added files for cold boot attack defense
+
+commit 69af3678bbfc0d52b3eaf2a8fafa6fc3e594a96b
+Author: Friedrich Doku <frd20@pitt.edu>
+Date:   Tue Jan 17 09:59:26 2023 -0500
+
+    update
+
+commit 2198fccdd0b685a53f5ec29257709e1c778cb15e
+Author: Friedrich Doku <frd20@pitt.edu>
+Date:   Tue Jan 17 09:57:43 2023 -0500
+
+    Added files for cold boot defense
+
+commit 133f7b2536aef49afd65bc5a2ce22033e5da63af
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 9 07:01:40 2023 -0500
+
+    bumped changelog version
+
 commit 137fa42cf368349cefd918a4ae80009b7f172896
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jan 9 07:01:11 2023 -0500
