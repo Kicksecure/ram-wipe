@@ -1,0 +1,3 @@
+Just a placeholder because config-package-dev will use this folder.
+To avoid linting warning:
+ram-wipe: package-contains-empty-directory usr/share/ram-wipe/
