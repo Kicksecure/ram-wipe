@@ -27,13 +27,6 @@ Source code:
 * `/usr/lib/dracut/modules.d/40cold-boot-attack-defense`
 * `/etc/default/grub.d/40_cold_boot_attack_defense.cfg`
 
-## miscellaneous
-
-* hardened malloc compatibility for haveged workaround
-`/lib/systemd/system/haveged.service.d/30_security-misc.conf`
-
-* set `dracut` `reproducible=yes` setting
-
 ## Related
 
 * security-misc
