@@ -1,3 +1,27 @@
+commit 6e8d6bbbec8cb57ffacb2c34007cb9b65fc4e0ad
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 30 07:36:55 2023 -0500
+
+    cleanup
+
+commit 671281fa6769059071fad766dd2acfdfa19a5db0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 30 07:36:11 2023 -0500
+
+    fix, renamed: debian/security-misc.triggers -> debian/ram-wipe.triggers
+
+commit 047a6a58e88f04c4ae35d8aa7a9213142993e6da
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 30 07:35:32 2023 -0500
+
+    config-package-dev hide /etc/sysctl.d/30_security-misc_kexec-disable.conf
+
+commit 82489173012b7f3f766de35523d16fc8f2e46940
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jan 24 07:12:05 2023 -0500
+
+    bumped changelog version
+
 commit 4dfaba43b1312264c887c7a88a687b1578ec08e6
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Jan 24 07:10:05 2023 -0500
