@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Copyright (C) 2023 - 2023 ENCRYPTED SUPPORT LP <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+#set -x
+set -e
+
+## Debugging.
+touch /run/ram-wipe/run-at-shutdown-yes.status
+
+echo "$0: INFO: Will run at shutdown, ok."

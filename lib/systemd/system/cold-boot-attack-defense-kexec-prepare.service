@@ -8,10 +8,29 @@ Description=Cold Boot Attack Defense Reboot RAM Wipe
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/bin/true
-ExecStop=/usr/libexec/security-misc/cold-boot-attack-defense-kexec-prepare
+ExecStart=/usr/libexec/ram-wipe/cold-boot-attack-defense-status
+ExecStop=/usr/libexec/ram-wipe/cold-boot-attack-defense-kexec-prepare
 ## Debugging.
 StandardOutput=journal+console
+
+## Goals:
+## - Always start on real hardware by default.
+## - Do not run inside VMs by default.
+## - Never start when /proc/cmdline contains wiperam=skip, even on hardware.
+## - Always start when /proc/cmdline contains wiperam=force, even inside VMs.
+
+## Triggering condition to run on real hardware.
+ConditionVirtualization=|yes
+
+## Triggering condition to always run (even inside a VM) if /proc/cmdline contains wiperam=force.
+ConditionKernelCommandLine=|wiperam=force
+
+## Do not run if /proc/cmdline contains wiperam=skip.
+ConditionKernelCommandLine=!wiperam=skip
+
+## Avoid RAM wipe reboot loop.
+## Defense in depth. The boot process should not proceed until this point anyhow.
+ConditionKernelCommandLine=!wiperamexit
 
 [Install]
 WantedBy=multi-user.target
