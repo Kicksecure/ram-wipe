@@ -6,27 +6,27 @@
 
 ## TODO: rename to wipe-ram-exit.sh (so it is different from wipe-ram.sh)
 
-DRACUT_QUIET=no
+. /lib/ram-wipe-lib.sh
 
 ram_wipe_action() {
    local kernel_wiperam_exit
    kernel_wiperam_exit=$(getarg wiperamexit)
 
    if [ "$kernel_wiperam_exit" = "no" ]; then
-      warn "wipe-ram-exit.sh: Skip, because wiperamexit=no kernel parameter detected, OK."
+      force_echo "wipe-ram-exit.sh: Skip, because wiperamexit=no kernel parameter detected, OK."
       return 0
    fi
 
    if [ "$kernel_wiperam_exit" != "yes" ]; then
-      warn "wipe-ram-exit.sh: Skip, because wiperamexit parameter is unset."
+      force_echo "wipe-ram-exit.sh: Skip, because wiperamexit parameter is unset."
       return 0
    fi
 
-   warn "wipe-ram-exit.sh: wiperamexit=yes, therefore running second RAM wipe..."
+   force_echo "wipe-ram-exit.sh: wiperamexit=yes, therefore running second RAM wipe..."
 
    wipe-ram-shutdown-helper
 
-   warn "wipe-ram-exit.sh: Second RAM wipe completed."
+   force_echo "wipe-ram-exit.sh: Second RAM wipe completed."
 }
 
 ram_wipe_action

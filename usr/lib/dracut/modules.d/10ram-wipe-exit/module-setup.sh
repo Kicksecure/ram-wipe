@@ -29,6 +29,7 @@ depends() {
 
 # called by dracut
 install() {
+    inst_simple "/usr/libexec/ram-wipe/ram-wipe-lib.sh" "/lib/ram-wipe-lib.sh"
     inst_multiple sync
     inst_multiple sleep
     inst_multiple ls
