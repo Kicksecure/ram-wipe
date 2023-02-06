@@ -18,12 +18,15 @@ ram_wipe_check_needshutdown() {
       ##    [FAILED] Failed to start dracut pre-udev hook.
       ## In other words, otherwise the system might not boot up cleanly.
       reboot --force
+      warn "wipe-ram-exit-needshutdown.sh: After reboot."
    elif [ "$wipe_action" = "poweroff" ]; then
       warn "wipe-ram-exit-needshutdown.sh: poweroff..."
       poweroff --force
+      warn "wipe-ram-exit-needshutdown.sh: After poweroff."
    elif [ "$wipe_action" = "halt" ]; then
       warn "wipe-ram-exit-needshutdown.sh: halt..."
       halt --force
+      warn "wipe-ram-exit-needshutdown.sh: After halt."
    else
       warn "wipe-ram-exit-needshutdown.sh: normal boot..."
    fi
