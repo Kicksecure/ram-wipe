@@ -18,7 +18,7 @@ ram_wipe_action() {
    fi
 
    if [ "$kernel_wiperam_exit" != "yes" ]; then
-      force_echo "wipe-ram-exit.sh: Skip, because wiperamexit parameter is unset."
+      force_echo "wipe-ram-exit.sh: Skip, because wiperamexit parameter is unset, OK."
       return 0
    fi
 
