@@ -18,7 +18,7 @@ ram_wipe_check_needshutdown() {
    fi
 
    if [ "$kernel_wiperam_setting" = "force" ]; then
-      force_echo "wipe-ram-needshutdown.sh: wiperam=force detected, OK."
+      force_echo "wipe-ram-needshutdown.sh: wiperam=force kernel parameter detected, OK."
    else
       detect_virt_output="$(systemd-detect-virt 2>&1)"
       detect_virt_exit_code="$?"
