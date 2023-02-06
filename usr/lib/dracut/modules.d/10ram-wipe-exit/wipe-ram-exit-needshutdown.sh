@@ -11,7 +11,7 @@ ram_wipe_check_needshutdown() {
    wipe_action=$(getarg wiperamaction)
 
    if [ "$wipe_action" = "reboot" ]; then
-      warn "wipe-ram.sh wiperamexit: reboot..."
+      warn "wipe-ram-exit-needshutdown.sh: reboot..."
       ## Why reboot? Why not just continue to boot?
       ## 1. To get rid of kernel command line options 'wiperamexit=yes wiperamaction=reboot'?
       ## 2. Also RAM wipe using sdmem leads to an OOM and the following error as seen in serial console:
@@ -19,13 +19,13 @@ ram_wipe_check_needshutdown() {
       ## In other words, otherwise the system might not boot up cleanly.
       reboot --force
    elif [ "$wipe_action" = "poweroff" ]; then
-      warn "wipe-ram.sh wiperamexit: poweroff..."
+      warn "wipe-ram-exit-needshutdown.sh: poweroff..."
       poweroff --force
    elif [ "$wipe_action" = "halt" ]; then
-      warn "wipe-ram.sh wiperamexit: halt..."
+      warn "wipe-ram-exit-needshutdown.sh: halt..."
       halt --force
    else
-      warn "wipe-ram.sh wiperamexit: normal boot..."
+      warn "wipe-ram-exit-needshutdown.sh: normal boot..."
    fi
 }
 
