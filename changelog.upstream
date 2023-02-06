@@ -1,3 +1,69 @@
+commit 301968010519a93dd4d315abc033896f391955cc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 12:06:28 2023 -0500
+
+    rework message output
+
+commit ce7a76fa5ff17298d2b1007465d3c591749ce2d4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:52:41 2023 -0500
+
+    refactoring
+
+commit 203b89c969ec724010511bfe5aedaaa558e541d0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:51:53 2023 -0500
+
+    debugging
+
+commit e81cc0b16ead95e84096afdc9d2b8df165b419c2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:50:35 2023 -0500
+
+    output
+
+commit e5948bc60d75772bbd2e18479cb1931d42f93c66
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:49:50 2023 -0500
+
+    rename
+
+commit 808c7acdc864ec65beb144bbf11085934bf7d8f3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:48:45 2023 -0500
+
+    comment
+
+commit 570c270b39a311fd1fc00a926567b72a941f507c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:47:51 2023 -0500
+
+    output
+
+commit 94d1b0fc359f29b28e3d4a3e4c0086e8c65b144f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:46:44 2023 -0500
+
+    rename
+
+commit 82b92d6ba010fa73a805d86abea5731170abf744
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:44:14 2023 -0500
+
+    refactoring
+
+commit 6533b6eda5ee3d285a36d969cfa0f7ac772c7729
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 11:37:23 2023 -0500
+
+    fix, run cold-boot-attack-defense-kexec-prepare.service only when needed
+
+commit 337ec2d98cbf1fbdc824e8352486601cc3e98c0d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 30 08:23:02 2023 -0500
+
+    bumped changelog version
+
 commit 6e8d6bbbec8cb57ffacb2c34007cb9b65fc4e0ad
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jan 30 07:36:55 2023 -0500
