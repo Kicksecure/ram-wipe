@@ -12,7 +12,7 @@ Description=Cold Boot Attack Defense Reboot RAM Wipe
 ## - Always start when /proc/cmdline contains wiperam=force, even inside VMs.
 
 ## Triggering condition to run on real hardware.
-ConditionVirtualization=|yes
+ConditionVirtualization=|no
 
 ## Triggering condition to always run (even inside a VM) if /proc/cmdline contains wiperam=force.
 ConditionKernelCommandLine=|wiperam=force
