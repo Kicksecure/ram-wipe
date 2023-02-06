@@ -41,7 +41,7 @@ install() {
     inst_multiple dmsetup
     inst_multiple wipe-ram-shutdown-helper
     inst_hook pre-udev 40 "$moddir/wipe-ram-exit.sh"
-    inst_hook pre-trigger 40 "$moddir/wipe-ram-needshutdown.sh"
+    inst_hook pre-trigger 40 "$moddir/wipe-ram-exit-needshutdown.sh"
 }
 
 # called by dracut
