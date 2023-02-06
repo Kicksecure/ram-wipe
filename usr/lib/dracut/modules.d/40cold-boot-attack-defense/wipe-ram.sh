@@ -36,11 +36,11 @@ ram_wipe() {
       return 0
    fi
 
-   force_echo "wipe-ram.sh: Cold boot attack defense... Starting first RAM wipe on shutdown... (1/2)"
+   force_echo "wipe-ram.sh: Cold boot attack defense... Starting first RAM wipe pass on shutdown... (1/2)"
 
    wipe-ram-shutdown-helper
 
-   force_echo "wipe-ram.sh: First RAM wipe completed, OK. (1/2)"
+   force_echo "wipe-ram.sh: First RAM wipe pass completed, OK. (1/2)"
 
    ## In theory might be better to check this beforehand, but the test is
    ## really fast. The user has no chance of reading the console output
