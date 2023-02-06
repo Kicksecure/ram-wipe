@@ -18,6 +18,7 @@ check() {
     require_binaries sdmem || return 1
     require_binaries pgrep || return 1
     require_binaries dmsetup || return 1
+    require_binaries wipe-ram-shutdown-helper || return 1
     return 0
 }
 
@@ -38,6 +39,7 @@ install() {
     inst_multiple sdmem
     inst_multiple pgrep
     inst_multiple dmsetup
+    inst_multiple wipe-ram-shutdown-helper
     inst_hook pre-udev 40 "$moddir/wipe-ram.sh"
     inst_hook pre-trigger 40 "$moddir/wipe-ram-needshutdown.sh"
 }

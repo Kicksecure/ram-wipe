@@ -10,14 +10,6 @@
 
 DRACUT_QUIET=no
 
-drop_caches() {
-   sync
-   ## https://gitlab.tails.boum.org/tails/tails/-/blob/master/config/chroot_local-includes/usr/local/lib/initramfs-pre-shutdown-hook
-   ### Ensure any remaining disk cache is erased by Linux' memory poisoning
-   echo 3 > /proc/sys/vm/drop_caches
-   sync
-}
-
 ram_wipe() {
    local kernel_wiperam_setting
    ## getarg returns the last parameter only.
@@ -46,13 +38,7 @@ ram_wipe() {
 
    warn "wipe-ram.sh: Cold boot attack defense... Starting RAM wipe on shutdown..."
 
-   drop_caches
-
-   ## TODO: sdmem settings. One pass only. Secure? Configurable?
-   ## TODO: > /dev/kmsg 2> /dev/kmsg
-   sdmem -l -l -v
-
-   drop_caches
+   wipe-ram-shutdown-helper
 
    warn "wipe-ram.sh: RAM wipe completed, OK."
 
