@@ -6,7 +6,7 @@
 
 DRACUT_QUIET=no
 
-ram_wipe_check_needshutdown() {
+ram_wipe__exit_check_needshutdown() {
    local wipe_action
    wipe_action=$(getarg wiperamaction)
 
@@ -32,4 +32,4 @@ ram_wipe_check_needshutdown() {
    fi
 }
 
-ram_wipe_check_needshutdown
+ram_wipe__exit_check_needshutdown
