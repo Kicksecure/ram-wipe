@@ -1,3 +1,21 @@
+commit 5c046a4f7de0a264eee2492309a7a5acb7cb5ae3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 12:28:28 2023 -0500
+
+    remove no longer needed file /etc/sysctl.d/40_ram-wipe.conf
+
+commit fe025e01870573c32d8492fca5e42131da3d8c1c
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 12:22:01 2023 -0500
+
+    fix
+
+commit 1c2084b2e46937d77b65ff8ff00ba0698f2b40a9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 6 12:09:01 2023 -0500
+
+    bumped changelog version
+
 commit 301968010519a93dd4d315abc033896f391955cc
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Feb 6 12:06:28 2023 -0500
