@@ -32,11 +32,11 @@ ram_wipe() {
 
    kernel_wiperamexit_setting=$(getarg wiperamexit)
    if [ "$kernel_wiperamexit_setting" = "yes" ]; then
-      force_echo "wipe-ram.sh: Skip, because wiperamexit=yes to avoid RAM wipe reboot loop."
+      force_echo "wipe-ram.sh: Skip, because wiperamexit=yes to avoid RAM wipe reboot loop, OK."
       return 0
    fi
 
-   force_echo "wipe-ram.sh: Cold boot attack defense... Starting RAM wipe on shutdown..."
+   force_echo "wipe-ram.sh: Cold boot attack defense... Starting first RAM wipe on shutdown..."
 
    wipe-ram-shutdown-helper
 
