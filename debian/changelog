@@ -1,3 +1,9 @@
+ram-wipe (3:1.7-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@whonix.org>  Wed, 14 Jun 2023 09:59:09 +0000
+
 ram-wipe (3:1.6-1) unstable; urgency=medium
 
   * New upstream version (local package).
