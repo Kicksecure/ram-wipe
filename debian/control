@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 13), debhelper-compat (= 13), config-package-dev
 Homepage: https://github.com/Kicksecure/ram-wipe
 Vcs-Browser: https://github.com/Kicksecure/ram-wipe
 Vcs-Git: https://github.com/Kicksecure/ram-wipe.git
-Standards-Version: 4.6.1.0
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 
 Package: ram-wipe
