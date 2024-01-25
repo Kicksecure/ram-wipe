@@ -1,3 +1,15 @@
+commit f5d8666cf5f993110c0533bfdb3678b5a9363978
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Jan 25 07:01:14 2024 -0500
+
+    run inside VMs by default for simplified testing
+
+commit 1ad3b0fe745dcf8dcf0f6a27ba9ed1c51c6a1ba2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jan 22 12:45:11 2024 +0000
+
+    bumped changelog version
+
 commit 1c8624a875e79ab6076899948aa811e0b4ccdfa8
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jan 22 07:21:01 2024 -0500
