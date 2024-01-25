@@ -21,15 +21,6 @@ ram_wipe() {
       return 0
    fi
 
-   if [ "$kernel_wiperam_setting" = "force" ]; then
-      force_echo "wipe-ram.sh: wiperam=force detected, OK."
-   else
-      if systemd-detect-virt >/dev/null 2>/dev/null ; then
-         force_echo "wipe-ram.sh: Skip, because VM detected and not using wiperam=force kernel parameter, OK."
-         return 0
-      fi
-   fi
-
    kernel_wiperamexit_setting=$(getarg wiperamexit)
    if [ "$kernel_wiperamexit_setting" = "yes" ]; then
       force_echo "wipe-ram.sh: Skip, because wiperamexit=yes kernel parameter detected to avoid RAM wipe reboot loop, OK."
