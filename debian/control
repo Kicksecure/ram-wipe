@@ -5,7 +5,7 @@ Source: ram-wipe
 Section: misc
 Priority: optional
 Maintainer: Patrick Schleizer <adrelanos@kicksecure.com>
-Build-Depends: debhelper (>= 13), debhelper-compat (= 13), config-package-dev
+Build-Depends: debhelper (>= 13.11.6), debhelper-compat (= 13), config-package-dev
 Homepage: https://github.com/Kicksecure/ram-wipe
 Vcs-Browser: https://github.com/Kicksecure/ram-wipe
 Vcs-Git: https://github.com/Kicksecure/ram-wipe.git
