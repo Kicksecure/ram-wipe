@@ -7,6 +7,35 @@
 #set -x
 set -e
 
+is_secure_boot_enforced() {
+   ## The ram-wipe package does not declare 'Depends: mokutil' in debian/control.
+   ## Adding 'Depends: mokutil' would make ram-wipe only installable on systems
+   ## where the mokutil package is available. Unfortunately, mokutil is
+   ## unavailable for many architectures.
+   if ! command -v mokutil &>/dev/null ; then
+      secure_boot_status="'unknown' (mokutil is not installed.)"
+      return 1
+   fi
+
+   if mokutil_output=$(mokutil --sb-state 2>&1) ; then
+      if echo "$mokutil_output" | grep --quiet --ignore-case --fixed-strings enabled ; then
+         secure_boot_status="'enabled' (mokutil_output: '$mokutil_output')"
+         return 0
+      elif echo "$mokutil_output" | grep --quiet --ignore-case --fixed-strings disabled ; then
+         secure_boot_status="'disabled' (mokutil_output: '$mokutil_output')"
+         return 1
+      else
+         secure_boot_status="'unknown-please-report-this-minor-bug' (mokutil_output: '$mokutil_output')"
+         return 2
+      fi
+   else
+      secure_boot_status="'disabled' (mokutil_output: '$mokutil_output')"
+      return 3
+   fi
+}
+
+KEXEC_ARGS=""
+
 ## provided by helper-scripts
 kernel=$(kernel-file-detect)
 initrd=$(initrd-file-detect)
@@ -29,9 +58,22 @@ fi
 
 echo "INFO: wiperamaction: $wiperamaction"
 
-## Debugging.
-echo kexec --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
+## Based on kdumpctl
+# For secureboot enabled machines, use new kexec file based syscall.
+# Old syscall will always fail as it does not have capability to
+# to kernel signature verification.
+if is_secure_boot_enforced; then
+   echo "Secure Boot is enabled. Using kexec file based syscall."
+   #KEXEC_ARGS="$KEXEC_ARGS -s"
+   ## Use long options instead.
+   KEXEC_ARGS="$KEXEC_ARGS --kexec-file-syscall"
+fi
 
-kexec --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
+echo "$secure_boot_status"
+
+## Debugging.
+echo kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
+
+kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
 
 echo "OK."
