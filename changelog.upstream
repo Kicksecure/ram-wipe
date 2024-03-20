@@ -1,3 +1,15 @@
+commit 7c30b7968520731d26e9200956901ca73df11857
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 20 11:46:18 2024 -0400
+
+    fix additional kexec based ram-wipe when Secure Boot is enabled
+
+commit e3bd5bd89409e679aed4d7cf5bdfa1e233683099
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Feb 2 12:36:42 2024 +0000
+
+    bumped changelog version
+
 commit b81676ffd3c87678e4bb0ecf2de95c299a805405
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Feb 2 07:32:33 2024 -0500
