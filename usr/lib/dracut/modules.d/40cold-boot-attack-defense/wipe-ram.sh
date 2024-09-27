@@ -13,7 +13,6 @@
 ram_wipe() {
    local kernel_wiperam_setting
    ## getarg returns the last parameter only.
-   ## if /proc/cmdline contains 'wiperam=skip wiperam=force' the last one wins.
    kernel_wiperam_setting=$(getarg wiperam)
 
    if [ "$kernel_wiperam_setting" = "skip" ]; then

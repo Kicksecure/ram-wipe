@@ -6,16 +6,7 @@
 Description=Cold Boot Attack Defense Reboot RAM Wipe
 
 ## Goals:
-## - Always start on real hardware by default.
-## - Do not run inside VMs by default.
-## - Never start when /proc/cmdline contains wiperam=skip, even on hardware.
-## - Always start when /proc/cmdline contains wiperam=force, even inside VMs.
-
-## Triggering condition to run on real hardware.
-ConditionVirtualization=|no
-
-## Triggering condition to always run (even inside a VM) if /proc/cmdline contains wiperam=force.
-ConditionKernelCommandLine=|wiperam=force
+## - never start when /proc/cmdline contains wiperam=skip
 
 ## Do not run if /proc/cmdline contains wiperam=skip.
 ConditionKernelCommandLine=!wiperam=skip
