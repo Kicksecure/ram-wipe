@@ -1,3 +1,21 @@
+commit 474c703ae3d635346d67d127f90803af2bd67772
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Sep 26 23:05:06 2024 -0400
+
+    always run ram-wipe if installed
+    
+    even inside VMs
+    
+    to simplify testing inside VMs
+    
+    deprecate wiperam=force kernel parameter
+
+commit a7993ec584681833669cc84843608e18182c11e1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 20 15:48:19 2024 +0000
+
+    bumped changelog version
+
 commit 7c30b7968520731d26e9200956901ca73df11857
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 20 11:46:18 2024 -0400
