@@ -1,3 +1,15 @@
+commit b0dbb5f6cfedc8cf28e438dfd60d3b8bd304c1ea
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 11:10:03 2025 -0400
+
+    Depends: systemd-cryptsetup
+
+commit 78418e43e60b124b785791de03d1d307951847c3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 14:47:42 2025 +0000
+
+    bumped changelog version
+
 commit 5cfc5f29b86a811e3b2e7ae17ae004551d0b2582
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Apr 17 10:44:29 2025 -0400
