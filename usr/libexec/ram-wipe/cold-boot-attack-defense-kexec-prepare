@@ -7,6 +7,15 @@
 #set -x
 set -e
 
+error_handler() {
+   local exit_code="$?"
+   local last_err="$BASH_COMMAND"
+   printf "%s\n" "ERROR: '$last_err' exit code '$exit_code'" >&2
+   exit 1
+}
+
+trap "error_handler" ERR
+
 is_secure_boot_enforced() {
    ## The ram-wipe package does not declare 'Depends: mokutil' in debian/control.
    ## Adding 'Depends: mokutil' would make ram-wipe only installable on systems
