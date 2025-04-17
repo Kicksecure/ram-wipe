@@ -8,7 +8,7 @@
 
 ram_wipe_action() {
    local kernel_wiperam_exit
-   kernel_wiperam_exit=$(getarg wiperamexit)
+   kernel_wiperam_exit="$(getarg wiperamexit)"
 
    if [ "$kernel_wiperam_exit" = "no" ]; then
       force_echo "wipe-ram-exit.sh: Skip, because wiperamexit=no kernel parameter detected, OK."

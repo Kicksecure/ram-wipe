@@ -8,7 +8,7 @@
 
 ram_wipe__exit_check_needshutdown() {
    local wipe_action
-   wipe_action=$(getarg wiperamaction)
+   wipe_action="$(getarg wiperamaction)"
 
    if [ "$wipe_action" = "reboot" ]; then
       force_echo "wipe-ram-exit-needshutdown.sh: reboot..."

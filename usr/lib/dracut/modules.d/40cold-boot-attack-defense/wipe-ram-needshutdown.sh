@@ -10,7 +10,7 @@ type getarg >/dev/null 2>&1 || . /lib/dracut-lib.sh
 
 ram_wipe_check_needshutdown() {
    local kernel_wiperam_setting
-   kernel_wiperam_setting=$(getarg wiperam)
+   kernel_wiperam_setting="$(getarg wiperam)"
 
    if [ "$kernel_wiperam_setting" = "skip" ]; then
       force_echo "wipe-ram-needshutdown.sh: Skip, because wiperam=skip kernel parameter detected, OK."

@@ -17,7 +17,7 @@ is_secure_boot_enforced() {
       return 1
    fi
 
-   if mokutil_output=$(mokutil --sb-state 2>&1) ; then
+   if mokutil_output="$(mokutil --sb-state 2>&1)" ; then
       if echo "$mokutil_output" | grep --quiet --ignore-case --fixed-strings enabled ; then
          secure_boot_status="'enabled' (mokutil_output: '$mokutil_output')"
          return 0
@@ -37,8 +37,8 @@ is_secure_boot_enforced() {
 KEXEC_ARGS=""
 
 ## provided by helper-scripts
-kernel=$(kernel-file-detect)
-initrd=$(initrd-file-detect)
+kernel="$(kernel-file-detect)"
+initrd="$(initrd-file-detect)"
 
 if   systemctl list-jobs --no-legend | grep "poweroff.target" | grep -q "start"; then
    wiperamexit="yes"

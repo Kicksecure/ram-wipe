@@ -13,14 +13,14 @@
 ram_wipe() {
    local kernel_wiperam_setting
    ## getarg returns the last parameter only.
-   kernel_wiperam_setting=$(getarg wiperam)
+   kernel_wiperam_setting="$(getarg wiperam)"
 
    if [ "$kernel_wiperam_setting" = "skip" ]; then
       force_echo "wipe-ram.sh: Skip, because wiperam=skip kernel parameter detected, OK."
       return 0
    fi
 
-   kernel_wiperamexit_setting=$(getarg wiperamexit)
+   kernel_wiperamexit_setting="$(getarg wiperamexit)"
    if [ "$kernel_wiperamexit_setting" = "yes" ]; then
       force_echo "wipe-ram.sh: Skip, because wiperamexit=yes kernel parameter detected to avoid RAM wipe reboot loop, OK."
       return 0
