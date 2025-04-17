@@ -5,27 +5,17 @@ Wiping RAM at shutdown to defeat cold boot attacks.
 Implemented as `dracut` module `cold-boot-attack-defense`.
 
 Requires `dracut`. In other words, RAM wipe is incompatible with systems
-using `initramfs-tools`. To switch to, install dracut:
+using `initramfs-tools`. To switch to, install dracut, see:
 
-    sudo apt update
-    sudo apt install --no-install-recommends dracut
-
-Linux distribution such as Kicksecure are advised to
-(and Kicksecure is planning to) install `dracut` instead of
-`initramfs-tools` by default.
+https://www.kicksecure.com/wiki/Dracut
 
 Only tested on `systemd` enabled systems.
 
 User documentation:
-https://www.kicksecure.com/wiki/Cold_Boot_Attack_Defense
+https://www.kicksecure.com/wiki/ram-wipe
 
 Design documentation:
 https://www.kicksecure.com/wiki/Dev/RAM_Wipe
-
-Source code:
-
-* `/usr/lib/dracut/modules.d/40cold-boot-attack-defense`
-* `/etc/default/grub.d/40_cold_boot_attack_defense.cfg`
 
 ## Related
 
@@ -44,11 +34,11 @@ Source code:
 
 Happening primarily in forums.
 
-https://forums.whonix.org/t/kernel-hardening/7296
+https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
 
 ## How to install `ram-wipe`
 
-See https://www.kicksecure.com/wiki/Cold_Boot_Attack_Defense#install
+See https://www.kicksecure.com/wiki/ram-wipe
 
 ## How to Build deb Package from Source Code
 
