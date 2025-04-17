@@ -19,7 +19,7 @@ Architecture: all
 ## 'systemd-cryptsetup' package installed while using Full Disk Encryption (FDE)
 ## can break the the boot.
 ## https://www.kicksecure.com/wiki/Dracut
-Depends: helper-scripts, dracut, systemd-cryptsetup,
+Depends: helper-scripts, dracut, systemd-cryptsetup, secure-delete,
  kexec-tools, ${misc:Depends}
 Description: Wipe RAM on shutdown and reboot
  A dracut module that wipes RAM on shutdown and reboot.
