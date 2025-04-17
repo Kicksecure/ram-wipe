@@ -1,3 +1,44 @@
+commit 90421d386c0c4a55ed816d82e58ab1b793f75b48
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 15:16:08 2025 -0400
+
+    readme
+
+commit 0276206fe867a86100d1a0b1814c9d590df5a3bc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 15:14:28 2025 -0400
+
+    readme
+
+commit 8efa83b158a324d08c6cea60ead1a733ecc2af1b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 15:02:32 2025 -0400
+
+    `add_dracutmodules+=" ram-wipe-exit "`
+    `add_dracutmodules+=" cold-boot-attack-defense "`
+    
+    https://github.com/Kicksecure/ram-wipe/issues/2#issuecomment-2813767529
+
+commit 6e5dce38a6bfbd2efcbc5b2983617ce0c7fdd3d2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 14:57:04 2025 -0400
+
+    comment
+
+commit 2b8ed5e266d5bb00dcd5195b6e4f58248d9b8bc1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 14:53:23 2025 -0400
+
+    Depends: secure-delete
+    
+    https://github.com/Kicksecure/ram-wipe/issues/2#issuecomment-2813767529
+
+commit db92639c1aa7a4d6a7e825a63bebf65c18f22410
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 16:32:02 2025 +0000
+
+    bumped changelog version
+
 commit b0dbb5f6cfedc8cf28e438dfd60d3b8bd304c1ea
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Apr 17 11:10:03 2025 -0400
