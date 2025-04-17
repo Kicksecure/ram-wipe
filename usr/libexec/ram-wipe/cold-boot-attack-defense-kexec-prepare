@@ -18,10 +18,10 @@ is_secure_boot_enforced() {
    fi
 
    if mokutil_output="$(mokutil --sb-state 2>&1)" ; then
-      if echo "$mokutil_output" | grep --quiet --ignore-case --fixed-strings enabled ; then
+      if printf "%s\n" "$mokutil_output" | grep --quiet --ignore-case --fixed-strings enabled ; then
          secure_boot_status="'enabled' (mokutil_output: '$mokutil_output')"
          return 0
-      elif echo "$mokutil_output" | grep --quiet --ignore-case --fixed-strings disabled ; then
+      elif printf "%s\n" "$mokutil_output" | grep --quiet --ignore-case --fixed-strings disabled ; then
          secure_boot_status="'disabled' (mokutil_output: '$mokutil_output')"
          return 1
       else
@@ -52,28 +52,28 @@ elif systemctl list-jobs --no-legend | grep "halt.target" | grep -q "start"; the
 else
    ## Could be kexec.target.
    ## Could be run during package installation.
-   echo "$0: INFO: Neither poweroff, reboot or halt. Therefore skipping 'kexec --load', ok."
+   printf "%s\n" "$0: INFO: Neither poweroff, reboot or halt. Therefore skipping 'kexec --load', ok."
    exit 0
 fi
 
-echo "INFO: wiperamaction: $wiperamaction"
+printf "%s\n" "INFO: wiperamaction: $wiperamaction"
 
 ## Based on kdumpctl
 # For secureboot enabled machines, use new kexec file based syscall.
 # Old syscall will always fail as it does not have capability to
 # to kernel signature verification.
 if is_secure_boot_enforced; then
-   echo "Secure Boot is enabled. Using kexec file based syscall."
+   printf "%s\n" "Secure Boot is enabled. Using kexec file based syscall."
    #KEXEC_ARGS="$KEXEC_ARGS -s"
    ## Use long options instead.
    KEXEC_ARGS="$KEXEC_ARGS --kexec-file-syscall"
 fi
 
-echo "$secure_boot_status"
+printf "%s\n" "$secure_boot_status"
 
 ## Debugging.
-echo kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
+printf "%s\n" kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
 
 kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
 
-echo "OK."
+printf "%s\n" "OK."
