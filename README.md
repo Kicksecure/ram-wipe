@@ -5,11 +5,11 @@ Wiping RAM at shutdown to defeat cold boot attacks.
 Implemented as `dracut` module `cold-boot-attack-defense`.
 
 Requires `dracut`. In other words, RAM wipe is incompatible with systems
-using `initramfs-tools`. To switch to, install dracut, see:
+using `initramfs-tools`. To switch, install dracut. See:
 
-https://www.kicksecure.com/wiki/Dracut
+https://www.kicksecure.com/wiki/dracut
 
-Only tested on `systemd` enabled systems.
+Only tested on `systemd`-enabled systems.
 
 User documentation:
 https://www.kicksecure.com/wiki/ram-wipe
@@ -22,7 +22,7 @@ https://www.kicksecure.com/wiki/Dev/RAM_Wipe
 * security-misc
 * Linux Kernel Runtime Guard (LKRG)
 * tirdad - TCP ISN CPU Information Leak Protection.
-* Kicksecure (TM) - a security-hardened Linux Distribution
+* Kicksecure (TM) - a security-hardened Linux distribution
 * And more.
 * https://github.com/Kicksecure/security-misc
 * https://www.kicksecure.com/wiki/Linux_Kernel_Runtime_Guard_LKRG
@@ -42,13 +42,13 @@ See https://www.kicksecure.com/wiki/ram-wipe
 
 ## How to Build deb Package from Source Code
 
-Can be build using standard Debian package build tools such as:
+Can be built using standard Debian package build tools such as:
 
 ```
 dpkg-buildpackage -b
 ```
 
-See instructions. (Replace `generic-package` with the actual name of this package `security-misc`.)
+See instructions. (Replace `generic-package` with the actual name of this package: `security-misc`.)
 
 * **A)** [easy](https://www.kicksecure.com/wiki/Dev/Build_Documentation/generic-package/easy), _OR_
 * **B)** [including verifying software signatures](https://www.kicksecure.com/wiki/Dev/Build_Documentation/generic-package)
@@ -60,4 +60,4 @@ See instructions. (Replace `generic-package` with the actual name of this packag
 
 ## Donate
 
-`security-misc` requires [donations](https://www.kicksecure.com/wiki/Donate) to stay alive!
+`ram-wipe` requires [donations](https://www.kicksecure.com/wiki/Donate) to stay alive!
