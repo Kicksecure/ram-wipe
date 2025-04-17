@@ -74,6 +74,8 @@ printf "%s\n" "$secure_boot_status"
 ## Debugging.
 printf "%s\n" kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
 
-kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
-
-printf "%s\n" "OK."
+if kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction" ; then
+   printf "%s\n" "OK."
+else
+   printf "%s\n" "ERROR: kexec load command failed." >&2
+fi
