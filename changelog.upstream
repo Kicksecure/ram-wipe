@@ -1,3 +1,17 @@
+commit 030a909158cac391f839ba172f25cf171e1c6d17
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Apr 23 23:07:43 2025 -0400
+
+    remove Depends: systemd-cryptsetup, because
+    systemd-cryptsetup does not exist in Debian bookworm
+    therefore remove from Depends: until porting to Debian trixie:
+
+commit ed9c2978b2c69cebd37b3e1412b648d8f00584e4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 17 19:19:52 2025 +0000
+
+    bumped changelog version
+
 commit 90421d386c0c4a55ed816d82e58ab1b793f75b48
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Apr 17 15:16:08 2025 -0400
