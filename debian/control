@@ -21,7 +21,8 @@ Architecture: all
 ## installed, can avoid installation or remove it using 'dummy-dependency'.
 ## See also:
 ## https://www.kicksecure.com/wiki/Dracut
-Depends: helper-scripts, dracut, systemd-cryptsetup, secure-delete,
+## TODO: Debian trixie - add systemd-cryptsetup
+Depends: helper-scripts, dracut, secure-delete,
  kexec-tools, ${misc:Depends}
 Description: Wipe RAM on shutdown and reboot
  A dracut module that wipes RAM on shutdown and reboot.
