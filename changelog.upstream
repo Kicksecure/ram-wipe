@@ -1,3 +1,21 @@
+commit 091b53511dcc96b194bd45c2aa40f3e7051b76df
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 7 03:26:05 2025 -0400
+
+    rephrase
+
+commit 02d790a7b614ae3dc0d85cae3c27c7ed7d38eb23
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 7 03:16:50 2025 -0400
+
+    fix wording cold boot attack versus warm boot attack
+
+commit a2243388b35820ee9078a5c99bda2ad9a8df85a1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Apr 24 03:09:26 2025 +0000
+
+    bumped changelog version
+
 commit 030a909158cac391f839ba172f25cf171e1c6d17
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Apr 23 23:07:43 2025 -0400
