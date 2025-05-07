@@ -3,7 +3,7 @@
 ## See the file COPYING for copying conditions.
 
 [Unit]
-Description=Cold Boot Attack Defense Reboot RAM Wipe
+Description=Warm Boot Attack Defense Reboot RAM Wipe
 
 ## Goals:
 ## - never start when /proc/cmdline contains wiperam=skip

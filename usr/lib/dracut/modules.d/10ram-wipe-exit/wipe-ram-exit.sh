@@ -21,7 +21,7 @@ ram_wipe_action() {
    fi
 
    force_echo "wipe-ram-exit.sh: wiperamexit=yes kernel parameter detected, OK."
-   force_echo "wipe-ram-exit.sh: Cold boot attack defense... Starting second RAM wipe pass on shutdown... (2/2)"
+   force_echo "wipe-ram-exit.sh: Warm boot attack defense... Starting second RAM wipe pass on shutdown... (2/2)"
 
    wipe-ram-shutdown-helper
 
