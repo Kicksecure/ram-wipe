@@ -26,7 +26,7 @@ ram_wipe() {
       return 0
    fi
 
-   force_echo "wipe-ram.sh: Warm boot attack defense... Starting first RAM wipe pass on shutdown... (1/2)"
+   force_echo "wipe-ram.sh: RAM extraction attack defense... Starting first RAM wipe pass during shutdown... (1/2)"
 
    wipe-ram-shutdown-helper
 
