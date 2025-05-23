@@ -1,3 +1,17 @@
+commit de214b386ddce7f431641e2d48da77f98e73d3bf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 23 08:22:00 2025 -0400
+
+    enable kernel parameters init_on_free and init_on_alloc
+    
+    (The latter might not be strictly required. Untested.)
+
+commit 19d45bd9587e9d43e25f8d2d6b0e4fa909816369
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 7 11:09:40 2025 +0000
+
+    bumped changelog version
+
 commit 091b53511dcc96b194bd45c2aa40f3e7051b76df
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 7 03:26:05 2025 -0400
