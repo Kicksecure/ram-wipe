@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 13.11.6), debhelper-compat (= 13), config-package-d
 Homepage: https://github.com/Kicksecure/ram-wipe
 Vcs-Browser: https://github.com/Kicksecure/ram-wipe
 Vcs-Git: https://github.com/Kicksecure/ram-wipe.git
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
 Package: ram-wipe
@@ -23,7 +23,7 @@ Architecture: all
 ## https://www.kicksecure.com/wiki/Dracut
 ## TODO: Debian trixie - add systemd-cryptsetup
 Depends: helper-scripts, dracut, secure-delete,
- kexec-tools, ${misc:Depends}
+ kexec-tools, systemd-cryptsetup, ${misc:Depends}
 Description: Wipe RAM on shutdown and reboot
  A dracut module that wipes RAM on shutdown and reboot.
  .
