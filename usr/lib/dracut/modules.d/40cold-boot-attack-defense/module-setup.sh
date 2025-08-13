@@ -10,7 +10,6 @@
 check() {
    require_binaries sync || return 1
    require_binaries sleep || return 1
-   require_binaries sdmem || return 1
    require_binaries dmsetup || return 1
    require_binaries wipe-ram-shutdown-helper || return 1
    return 0
@@ -26,7 +25,6 @@ install() {
    inst_simple "/usr/libexec/ram-wipe/ram-wipe-lib.sh" "/lib/ram-wipe-lib.sh"
    inst_multiple sync
    inst_multiple sleep
-   inst_multiple sdmem
    inst_multiple dmsetup
    inst_multiple wipe-ram-shutdown-helper
    inst_hook shutdown 40 "$moddir/wipe-ram.sh"
