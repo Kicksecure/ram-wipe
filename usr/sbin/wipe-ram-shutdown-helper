@@ -18,10 +18,4 @@ drop_caches() {
 
 drop_caches
 
-## TODO: sdmem settings. One pass only. Secure? Configurable?
-## TODO: > /dev/kmsg 2> /dev/kmsg
-sdmem -l -l -v
-
-drop_caches
-
 true "$0: END"
