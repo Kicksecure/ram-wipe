@@ -20,22 +20,14 @@ ram_wipe() {
       return 0
    fi
 
-   kernel_wiperamexit_setting="$(getarg wiperamexit)"
-   if [ "$kernel_wiperamexit_setting" = "yes" ]; then
-      force_echo "wipe-ram.sh: Skip, because wiperamexit=yes kernel parameter detected to avoid RAM wipe reboot loop, OK."
-      return 0
-   fi
-
-   force_echo "wipe-ram.sh: RAM extraction attack defense... Starting first RAM wipe pass during shutdown... (1/2)"
+   force_echo "wipe-ram.sh: RAM extraction attack defense... Starting RAM wipe pass during shutdown..."
 
    wipe-ram-shutdown-helper
 
-   force_echo "wipe-ram.sh: First RAM wipe pass completed, OK. (1/2)"
+   force_echo "wipe-ram.sh: RAM wipe pass completed, OK."
 
    ## In theory might be better to check this beforehand, but the test is
-   ## really fast. The user has no chance of reading the console output
-   ## without introducing an artificial delay because the sdmem which runs
-   ## after this, results in much more console output.
+   ## really fast.
    force_echo "wipe-ram.sh: Checking if there are still mounted encrypted disks..."
 
    local dmsetup_actual_output dmsetup_expected_output
@@ -56,15 +48,6 @@ dmsetup_actual_output: '$dmsetup_actual_output'"
       ## How else could the user be informed that something is wrong?
       sleep 5
    fi
-
-   force_echo "wipe-ram.sh: Now running 'kexec --exec'..."
-   if kexec --exec ; then
-      force_echo "wipe-ram.sh: 'kexec --exec' succeeded."
-      return 0
-   fi
-
-   force_echo "wipe-ram.sh: 'kexec --exec' failed!"
-   sleep 5
 }
 
 ram_wipe

@@ -43,48 +43,5 @@ is_secure_boot_enforced() {
    fi
 }
 
-KEXEC_ARGS=""
-
-## provided by helper-scripts
-kernel="$(kernel-file-detect)"
-initrd="$(initrd-file-detect)"
-
-if   systemctl list-jobs --no-legend | grep "poweroff.target" | grep -q "start"; then
-   wiperamexit="yes"
-   wiperamaction="poweroff"
-elif systemctl list-jobs --no-legend | grep "reboot.target" | grep -q "start"; then
-   wiperamexit="yes"
-   wiperamaction="reboot"
-elif systemctl list-jobs --no-legend | grep "halt.target" | grep -q "start"; then
-   wiperamexit="yes"
-   wiperamaction="halt"
-else
-   ## Could be kexec.target.
-   ## Could be run during package installation.
-   printf "%s\n" "$0: INFO: Neither poweroff, reboot or halt. Therefore skipping 'kexec --load', ok."
-   exit 0
-fi
-
-printf "%s\n" "INFO: wiperamaction: $wiperamaction"
-
-## Based on kdumpctl
-# For secureboot enabled machines, use new kexec file based syscall.
-# Old syscall will always fail as it does not have capability to
-# to kernel signature verification.
-if is_secure_boot_enforced; then
-   printf "%s\n" "Secure Boot is enabled. Using kexec file based syscall."
-   #KEXEC_ARGS="$KEXEC_ARGS -s"
-   ## Use long options instead.
-   KEXEC_ARGS="$KEXEC_ARGS --kexec-file-syscall"
-fi
-
 printf "%s\n" "$secure_boot_status"
 
-## Debugging.
-printf "%s\n" kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction"
-
-if kexec $KEXEC_ARGS --load "$kernel" --initrd="$initrd" --reuse-cmdline --append="wiperamexit=$wiperamexit wiperamaction=$wiperamaction" ; then
-   printf "%s\n" "OK."
-else
-   printf "%s\n" "ERROR: kexec load command failed." >&2
-fi
