@@ -27,4 +27,4 @@ Depends: helper-scripts, dracut, secure-delete,
 Description: Wipe RAM on shutdown and reboot
  A dracut module that wipes RAM on shutdown and reboot.
  .
- Not implemented for initramfs.
+ Not implemented for initramfs-tools.
