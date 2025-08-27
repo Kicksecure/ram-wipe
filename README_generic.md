@@ -2,7 +2,7 @@
 
 A dracut module that wipes RAM on shutdown and reboot.
 
-Not implemented for initramfs.
+Not implemented for initramfs-tools.
 
 ## How to install `ram-wipe` using apt-get ##
 
