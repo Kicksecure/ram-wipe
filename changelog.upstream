@@ -1,3 +1,63 @@
+commit b4f7f801583aa72047a0a9907c828e4d961b16eb
+Merge: b8ed77b 2f3c8f9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Aug 22 06:12:58 2025 -0400
+
+    Merge remote-tracking branch 'github-kicksecure/master'
+
+commit 2f3c8f969233c61800621b92e84307402a498640
+Merge: b8ed77b 88091fe
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Aug 22 06:10:04 2025 -0400
+
+    Merge pull request #4 from zarhus/master
+    
+    Remove sdmem and kexec (second stage)
+
+commit b8ed77b0d5d1985c0ac8a97da0453e0156fb85b7
+Merge: a4aff9c f4f06a4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 08:57:52 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit a4aff9c28fc8189a229b25be497ca04a2aee1a3d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:57:28 2025 -0400
+
+    bumped Standards-Version
+
+commit 1b4a2c312174c616de31dbfd803809d00a9708c4
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:25:34 2025 -0400
+
+    readme
+
+commit 88091fea2c58c7f1345c4a05e92fddfecbe1d807
+Author: Kamil Aronowski <kamil.aronowski@3mdeb.com>
+Date:   Wed Aug 13 21:06:30 2025 +0200
+
+    Remove sdmem and kexec (second stage)
+    
+    As per testing kernel memory zeroing with `init_on_free=1`, remove all
+    the references to `sdmem` and the second RAM wipe pass. See
+    https://www.kicksecure.com/wiki/Dev/RAM_Wipe#ram-wipe_improvements for
+    more information.
+    
+    Signed-off-by: Kamil Aronowski <kamil.aronowski@3mdeb.com>
+
+commit f4f06a47402d52c8cf2147754533783e07f79d99
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 5 22:58:05 2025 -0500
+
+    Port to Trixie.
+
+commit 2a7ff83a19714b68496d696aeb83fe2f0da5103b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 23 12:39:26 2025 +0000
+
+    bumped changelog version
+
 commit de214b386ddce7f431641e2d48da77f98e73d3bf
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri May 23 08:22:00 2025 -0400
