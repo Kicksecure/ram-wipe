@@ -18,7 +18,7 @@ Architecture: all
 ## While not a hard dependency in all cases, not having the
 ## 'systemd-cryptsetup' package installed while using Full Disk Encryption (FDE)
 ## can break the the boot. Those who do not wish to have 'systemd-cryptsetup'
-## installed, can avoid installation or remove it using 'dummy-dependency'.
+## installed, can avoid installation by using 'dummy-dependency'.
 ## See also:
 ## https://www.kicksecure.com/wiki/Dracut
 Depends: helper-scripts, dracut, secure-delete,
