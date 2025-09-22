@@ -1,3 +1,22 @@
+commit 778566b6770298fa4c81cb908eb3300f4d7b0bb0
+Merge: dded321 2dcff66
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 22 13:00:32 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 2dcff668bbb80b59d7303274f3e390c4db87e972
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Sep 21 16:05:21 2025 -0500
+
+    Comment changes for security-misc split
+
+commit dded3219b78ecc5b559dc7d16e4f3b7d4ea45efc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 2 15:23:36 2025 +0000
+
+    bumped changelog version
+
 commit 14b92cdb885a12e53158becccce4f0a90d3f48d7
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Aug 27 19:29:36 2025 +0000
