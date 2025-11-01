@@ -17,7 +17,7 @@ ram_wipe_check_needshutdown() {
       return 0
    fi
 
-   force_echo "wipe-ram-needshutdown.sh: Calling dracut function need_shutdown to drop back into initramfs at shutdown, OK."
+   true "wipe-ram-needshutdown.sh: Calling dracut function need_shutdown to drop back into initramfs at shutdown, OK."
    need_shutdown
 
    return 0

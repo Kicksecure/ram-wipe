@@ -44,4 +44,3 @@ is_secure_boot_enforced() {
 }
 
 printf "%s\n" "$secure_boot_status"
-
