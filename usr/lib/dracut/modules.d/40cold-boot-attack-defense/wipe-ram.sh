@@ -31,10 +31,12 @@ ram_wipe() {
    force_echo "wipe-ram.sh: Checking if there are still mounted encrypted disks..."
 
    local dmsetup_actual_output dmsetup_expected_output
-   dmsetup_actual_output="$(dmsetup ls --target crypt)"
+   dmsetup_actual_output="$(dmsetup ls --target crypt 2>&1)"
    dmsetup_expected_output="No devices found"
 
    if [ "$dmsetup_actual_output" = "$dmsetup_expected_output" ]; then
+      force_echo "wipe-ram.sh: Success, there are no more mounted encrypted disks, OK."
+   elif [ "$dmsetup_actual_output" = "" ]; then
       force_echo "wipe-ram.sh: Success, there are no more mounted encrypted disks, OK."
    else
       ## dracut should unmount the root encrypted disk cryptsetup luksClose during shutdown
