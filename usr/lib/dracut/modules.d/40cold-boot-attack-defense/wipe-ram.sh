@@ -8,10 +8,13 @@
 ## First version by @friedy10.
 ## https://github.com/friedy10/dracut/blob/master/modules.d/40sdmem/wipe.sh
 
+## Use '.' and not 'source' in 'sh'.
 . /lib/ram-wipe-lib.sh
 
 ram_wipe() {
-   local kernel_wiperam_setting
+   ## 'local' is unavailable in 'sh'.
+   #local kernel_wiperam_setting dmsetup_actual_output dmsetup_expected_output
+
    ## getarg returns the last parameter only.
    kernel_wiperam_setting="$(getarg wiperam)"
 
@@ -30,7 +33,6 @@ ram_wipe() {
    ## really fast.
    force_echo "wipe-ram.sh: Checking if there are still mounted encrypted disks..."
 
-   local dmsetup_actual_output dmsetup_expected_output
    dmsetup_actual_output="$(dmsetup ls --target crypt 2>&1)"
    dmsetup_expected_output="No devices found"
 
