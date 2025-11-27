@@ -1,4 +1,0 @@
-## Copyright (C) 2023 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
-## See the file COPYING for copying conditions.
-
-/usr/lib/sysctl.d/30_security-misc_kexec-disable.conf
