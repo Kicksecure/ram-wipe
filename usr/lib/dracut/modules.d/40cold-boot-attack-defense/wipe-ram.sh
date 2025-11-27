@@ -11,6 +11,14 @@
 ## Use '.' and not 'source' in 'sh'.
 . /lib/ram-wipe-lib.sh
 
+drop_caches() {
+   sync
+   ## https://gitlab.tails.boum.org/tails/tails/-/blob/master/config/chroot_local-includes/usr/local/lib/initramfs-pre-shutdown-hook
+   ### Ensure any remaining disk cache is erased by Linux' memory poisoning
+   echo 3 > /proc/sys/vm/drop_caches
+   sync
+}
+
 ram_wipe() {
    ## 'local' is unavailable in 'sh'.
    #local kernel_wiperam_setting dmsetup_actual_output dmsetup_expected_output
@@ -25,7 +33,7 @@ ram_wipe() {
 
    force_echo "wipe-ram.sh: RAM extraction attack defense... Starting RAM wipe pass during shutdown..."
 
-   wipe-ram-shutdown-helper
+   drop_caches
 
    force_echo "wipe-ram.sh: RAM wipe pass completed, OK."
 

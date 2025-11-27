@@ -11,7 +11,6 @@ check() {
    require_binaries sync || return 1
    require_binaries sleep || return 1
    require_binaries dmsetup || return 1
-   require_binaries wipe-ram-shutdown-helper || return 1
    return 0
 }
 
@@ -26,7 +25,6 @@ install() {
    inst_multiple sync
    inst_multiple sleep
    inst_multiple dmsetup
-   inst_multiple wipe-ram-shutdown-helper
    inst_hook shutdown 40 "$moddir/wipe-ram.sh"
    inst_hook cleanup 80 "$moddir/wipe-ram-needshutdown.sh"
 }
