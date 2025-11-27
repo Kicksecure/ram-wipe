@@ -2,4 +2,4 @@
 ## See the file COPYING for copying conditions.
 
 ## This is how dracut is still implemented.
-ram-wipe: executable-in-usr-lib [usr/lib/dracut/modules.d/40cold-boot-attack-defense/*]
+ram-wipe: executable-in-usr-lib [usr/lib/dracut/modules.d/40ram-wipe/*]
