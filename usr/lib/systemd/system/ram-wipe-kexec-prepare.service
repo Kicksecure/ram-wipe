@@ -18,7 +18,7 @@ ConditionKernelCommandLine=!wiperamexit
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/libexec/ram-wipe/cold-boot-attack-defense-status
+ExecStart=/usr/bin/true
 ExecStop=/usr/libexec/ram-wipe/cold-boot-attack-defense-kexec-prepare
 ## Debugging.
 StandardOutput=journal+console
