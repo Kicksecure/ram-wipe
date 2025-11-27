@@ -33,6 +33,7 @@ ram_wipe() {
    ## really fast.
    force_echo "wipe-ram.sh: Checking if there are still mounted encrypted disks..."
 
+   ## TODO: use 'timeout'?
    dmsetup_actual_output="$(dmsetup ls --target crypt 2>&1)"
    dmsetup_expected_output="No devices found"
 
