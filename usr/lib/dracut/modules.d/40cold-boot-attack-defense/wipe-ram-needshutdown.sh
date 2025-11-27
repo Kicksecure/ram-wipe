@@ -9,7 +9,9 @@ type getarg >/dev/null 2>&1 || . /lib/dracut-lib.sh
 . /lib/ram-wipe-lib.sh
 
 ram_wipe_check_needshutdown() {
-   local kernel_wiperam_setting
+   ## 'local' is unavailable in 'sh'.
+   #local kernel_wiperam_setting
+
    kernel_wiperam_setting="$(getarg wiperam)"
 
    if [ "$kernel_wiperam_setting" = "skip" ]; then
