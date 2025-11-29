@@ -1,3 +1,89 @@
+commit e68a53e34b2a6d731800ac58c6b9ef65cb2aceea
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:41:34 2025 -0500
+
+    fix
+
+commit aa3ba3d2e335b4e3f4bebeddd536e0991067900d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:41:08 2025 -0500
+
+    fix
+
+commit 55f5a9139e285c19dff1e4089515227d6ec4c6ce
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:39:27 2025 -0500
+
+    Fix: Disable re-enabling kexec because ram-wipe fortunately no longer requires kexec.
+
+commit 5402872cefc1d88fca597e3bde058b0ddc17cdcc
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:37:46 2025 -0500
+
+    cleanup
+
+commit dfcb7a90d29f1d4d0d079e37a2d4509e9ca832be
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:34:37 2025 -0500
+
+    rename
+
+commit 69202be69b2210ccef3421c39be4e3dcc47544a8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:34:10 2025 -0500
+
+    rename
+
+commit 52917bac7b54cc74d6c7b6e3821f65d9d9c4fbf9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:33:20 2025 -0500
+
+    code simplification
+
+commit 305d2285337e35ba83159289ac8535f1d601ea42
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:30:24 2025 -0500
+
+    cleanup
+
+commit 55c45ca2e03a99d91750c1cbdd8e5c380cfbefd6
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:29:22 2025 -0500
+
+    cleanup
+
+commit dc3aa26a9978fcac9e220e9dc70d5eb36101d9bf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:27:47 2025 -0500
+
+    comment
+
+commit 36fe53d3ef6c25628e005e10688115d7c5405f8a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:26:02 2025 -0500
+
+    fix
+
+commit 2617ecab60e14d18ba4e2dbb4eb51077064dc70a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:25:26 2025 -0500
+
+    fix
+
+commit 8f425a62968088562c66664dbcc8e99959a5e5f0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Nov 27 05:22:50 2025 -0500
+
+    fix false-positive detection of remaining encrypted disk still being mounted
+    
+    https://forums.kicksecure.com/t/question-about-ram-wipe/1374
+
+commit 4f57476e1517553eed721d7e28d90a700a63d3af
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 1 09:40:51 2025 +0000
+
+    bumped changelog version
+
 commit 23b3e6cc96cace9c6aeca6e5e189daf4681409a4
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 1 05:40:00 2025 -0400
