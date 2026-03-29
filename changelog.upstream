@@ -1,3 +1,64 @@
+commit b4e6a62a38b8191b1c391519990128eb2ae2df4e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:54:51 2026 -0400
+
+    readme
+
+commit 9cf09d1386cd6bd51531227b2f25bee817606ede
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:54:17 2026 -0400
+
+    description
+
+commit cbdda76493139d970724046f90ec0316fa119b59
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:54:07 2026 -0400
+
+    readme
+
+commit 076b68691db25c957451aff6b0a0730bf2f8d25e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:50:59 2026 -0400
+
+    description
+
+commit 3193eafbbdec57f681ee499d4f3d6ee82301e02e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:48:42 2026 -0400
+
+    description
+
+commit a3b43fa6144e53598227877671b8bea2bf38ff0d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:09:28 2026 -0400
+
+    readme
+
+commit d36bb6f36297dd400f6427ac45ad1a6fa2a17e32
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:05:52 2026 -0400
+
+    remove unused README_generic.md
+
+commit a5262918140636c3c3a2965d476ac0678df1b1de
+Merge: 600f198 76e90d9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 29 02:03:12 2026 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 76e90d924ecfb4985c90aa4814ea7ea884f2fa38
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sat Mar 28 23:14:06 2026 -0400
+
+    readme
+
+commit 600f198d563585614125e2a54f6eaf678a934893
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Mar 28 09:51:11 2026 +0000
+
+    bumped changelog version
+
 commit dd83abcedb6450f03fa63cc0c7c2ef259149b430
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Mar 28 05:26:59 2026 -0400
