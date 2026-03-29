@@ -19,8 +19,7 @@ Architecture: all
 ## 'systemd-cryptsetup' package installed while using Full Disk Encryption (FDE)
 ## can break the the boot. Those who do not wish to have 'systemd-cryptsetup'
 ## installed, can avoid installation by using 'dummy-dependency'.
-## See also:
-## https://www.kicksecure.com/wiki/Dracut
+## See also: https://www.kicksecure.com/wiki/Dracut
 Depends: helper-scripts, dracut, secure-delete,
  kexec-tools, systemd-cryptsetup, ${misc:Depends}
 Description: Wipe RAM on shutdown and reboot
@@ -41,11 +40,11 @@ Description: Wipe RAM on shutdown and reboot
  https://www.kicksecure.com/wiki/Dev/RAM_Wipe
  .
  Discussion:
- https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
+ https://forums.whonix.org/t/is-ram-wipe-possible-cold-warm-boot-attack-defense
  .
  Related links:
- * https://www.kicksecure.com
- * https://www.kicksecure.com/wiki/ram-wipe
- * https://www.kicksecure.com/wiki/Dev/RAM_Wipe
- * https://www.kicksecure.com/wiki/dracut
- * https://www.kicksecure.com/wiki/systemd
+  * https://www.kicksecure.com
+  * https://www.kicksecure.com/wiki/ram-wipe
+  * https://www.kicksecure.com/wiki/Dev/RAM_Wipe
+  * https://www.kicksecure.com/wiki/dracut
+  * https://www.kicksecure.com/wiki/systemd
