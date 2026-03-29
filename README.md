@@ -17,14 +17,14 @@ Design documentation:
 https://www.kicksecure.com/wiki/Dev/RAM_Wipe
 
 Discussion:
-https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
+https://forums.whonix.org/t/is-ram-wipe-possible-cold-warm-boot-attack-defense
 
 Related links:
-https://www.kicksecure.com
-https://www.kicksecure.com/wiki/ram-wipe
-https://www.kicksecure.com/wiki/Dev/RAM_Wipe
-https://www.kicksecure.com/wiki/dracut
-https://www.kicksecure.com/wiki/systemd
+* https://www.kicksecure.com
+* https://www.kicksecure.com/wiki/ram-wipe
+* https://www.kicksecure.com/wiki/Dev/RAM_Wipe
+* https://www.kicksecure.com/wiki/dracut
+* https://www.kicksecure.com/wiki/systemd
 
 ## How to install `ram-wipe` using apt-get ##
 
