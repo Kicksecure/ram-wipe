@@ -24,6 +24,28 @@ Architecture: all
 Depends: helper-scripts, dracut, secure-delete,
  kexec-tools, systemd-cryptsetup, ${misc:Depends}
 Description: Wipe RAM on shutdown and reboot
- A dracut module that wipes RAM on shutdown and reboot.
+ Helps protect sensitive data by wiping RAM during shutdown and reboot,
+ which can help defend against cold boot attacks.
  .
- Not implemented for initramfs-tools.
+ This package requires dracut. It is incompatible with systems using
+ initramfs-tools unless they are switched to dracut.
+ .
+ Implemented as the dracut module ram-wipe.
+ .
+ Only tested on systemd-enabled systems.
+ .
+ User documentation:
+  https://www.kicksecure.com/wiki/ram-wipe
+ .
+ Design documentation:
+  https://www.kicksecure.com/wiki/Dev/RAM_Wipe
+ .
+ Discussion:
+  https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
+ .
+ Related links:
+  https://www.kicksecure.com
+  https://www.kicksecure.com/wiki/ram-wipe
+  https://www.kicksecure.com/wiki/Dev/RAM_Wipe
+  https://www.kicksecure.com/wiki/dracut
+  https://www.kicksecure.com/wiki/systemd
