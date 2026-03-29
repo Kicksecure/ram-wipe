@@ -1,63 +1,63 @@
-## Cold Boot Attack Defense
+# Wipe RAM on shutdown and reboot #
 
-Wiping RAM at shutdown to defeat cold boot attacks.
+A dracut module that wipes RAM on shutdown and reboot.
 
-Implemented as `dracut` module `cold-boot-attack-defense`.
+Not implemented for initramfs-tools.
 
-Requires `dracut`. In other words, RAM wipe is incompatible with systems
-using `initramfs-tools`. To switch, install dracut. See:
+## How to install `ram-wipe` using apt-get ##
 
-https://www.kicksecure.com/wiki/dracut
+1\. Download the APT Signing Key.
 
-Only tested on `systemd`-enabled systems.
+```
+wget https://www.kicksecure.com/keys/derivative.asc
+```
 
-User documentation:
-https://www.kicksecure.com/wiki/ram-wipe
+Users can [check the Signing Key](https://www.kicksecure.com/wiki/Signing_Key) for better security.
 
-Design documentation:
-https://www.kicksecure.com/wiki/Dev/RAM_Wipe
+2\. Add the APT Signing Key.
 
-## Related
+```
+sudo cp ~/derivative.asc /usr/share/keyrings/derivative.asc
+```
 
-* security-misc
-* Linux Kernel Runtime Guard (LKRG)
-* tirdad - TCP ISN CPU Information Leak Protection.
-* Kicksecure (TM) - a security-hardened Linux distribution
-* And more.
-* https://github.com/Kicksecure/security-misc
-* https://www.kicksecure.com/wiki/Linux_Kernel_Runtime_Guard_LKRG
-* https://github.com/Kicksecure/tirdad
-* https://www.kicksecure.com
-* https://github.com/Kicksecure
+3\. Add the derivative repository.
 
-## Discussion
+```
+echo "deb [signed-by=/usr/share/keyrings/derivative.asc] https://deb.kicksecure.com trixie main contrib non-free" | sudo tee /etc/apt/sources.list.d/derivative.list
+```
 
-Happening primarily in forums.
+4\. Update your package lists.
 
-https://forums.whonix.org/t/is-ram-wipe-possible-inside-whonix-cold-boot-attack-defense/5596
+```
+sudo apt-get update
+```
 
-## How to install `ram-wipe`
+5\. Install `ram-wipe`.
 
-See https://www.kicksecure.com/wiki/ram-wipe
+```
+sudo apt-get install ram-wipe
+```
 
-## How to Build deb Package from Source Code
+## How to Build deb Package from Source Code ##
 
-Can be built using standard Debian package build tools such as:
+Can be build using standard Debian package build tools such as:
 
 ```
 dpkg-buildpackage -b
 ```
 
-See instructions. (Replace `generic-package` with the actual name of this package: `ram-wipe`.)
+See instructions.
+
+NOTE: Replace `generic-package` with the actual name of this package `ram-wipe`.
 
 * **A)** [easy](https://www.kicksecure.com/wiki/Dev/Build_Documentation/generic-package/easy), _OR_
 * **B)** [including verifying software signatures](https://www.kicksecure.com/wiki/Dev/Build_Documentation/generic-package)
 
-## Contact
+## Contact ##
 
 * [Free Forum Support](https://forums.kicksecure.com)
-* [Professional Support](https://www.kicksecure.com/wiki/Professional_Support)
+* [Premium Support](https://www.kicksecure.com/wiki/Premium_Support)
 
-## Donate
+## Donate ##
 
 `ram-wipe` requires [donations](https://www.kicksecure.com/wiki/Donate) to stay alive!
